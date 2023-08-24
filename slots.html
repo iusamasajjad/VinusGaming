@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styling/style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Vinus Gaming</title>
+</head>
+
+<body>
+    <div>
+        <div class="bg-gray flex flex-col lg:flex-row">
+            <!-- ==================== mobile-menu =============== -->
+        <!-- Mobile menu button-->
+        <div class=" bg-black py-4 px-5 flex justify-between items-center lg:hidden">
+            <!-- Mobile menu button-->
+            <button onclick="menuToggle()" type="button"
+                class="inline-flex items-center justify-center rounded-md p-2 text-white  hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <img src="./assets/images/menu.png" alt="">
+            </button>
+            <div>
+                <p class="text-white font-semibold text-xl">Home</p>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/images/search-icon.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="">
+            <div class=" text-center mt-4 overlay" id="mobile-menu">
+                <a href="javascript:void(0)" onclick="menuClose()"
+                    class="closebtn text-6xl absolute top-4 right-0 mr-10 font-semibold text-white ">&times;</a>
+                <div class="space-y-1 mt-16 px-2 pt-2 pb-3">
+                    <Header class="h-screen py-8 flex flex-col justify-between">
+                        <nav class="px-5 flex">
+                            <ul class="w-full">
+                                <li class="pb-10"><a href=""><img class="mx-auto w-1/2" src="./assets/images/logo.png" alt="logo"></a>
+                                </li>
+                                <div class="bg-light-gray py-3 rounded-xl">
+                                    <div class="flex py-3 px-5 justify-center items-center">
+                                        <img class="mr-3" src="./assets/images/white-home.png" alt="home">
+                                        <li class="text-white"><a href="./index.html">Home</a></li>
+                                    </div>
+                                    <div class="flex mt-4 relative bg-black py-3 px-5 justify-center items-center">
+                                        <img class="mr-3" src="./assets/images/game-pink.png" alt="home">
+                                        <div class="absolute left-0 top-[-5px]"><img src="./assets/images/active-pink.png"
+                                                alt=""></div>
+                                        <li class="text-white"><a href="./seamlessGaming.html">Seamless Gaming</a></li>
+                                    </div>
+                                    <div class="flex mt-4 py-1 mx-10 border-b justify-center items-center">
+                                        <div><img src="./assets/images/search-icon.png" alt=""></div>
+                                        <input class="bg-transparent  text-xl outline-none w-full text-white ml-3" type="search"
+                                            placeholder="search" name="" id="">
+                                    </div>
+                                    <div class="flex  py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>Evolution</li>
+                                    </div>
+                                    <div class="flex py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>Progmatic</li>
+                                    </div>
+                                    <div class="flex py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>CQ9</li>
+                                    </div>
+                                    <div class="flex py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>Vota</li>
+                                    </div>
+                                    <div class="flex py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>Dowlnn</li>
+                                    </div>
+                                    <div class="flex py-2 px-5 items-center">
+                                        <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                        <li class="text-white opacity-50"><a href=""></a>Vivo</li>
+                                    </div>
+                                    <div class="flex mt-2 py-2 px-5 justify-center items-center">
+                                        <img class="mr-3" src="./assets/images/transfer.png" alt="home">
+                                        <li class="text-white"><a href=""></a>Transfer Games</li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </nav>
+                        <div class="px-5 mt-5 flex text-center justify-center">
+                            <div class="bg-light-gray w-full py-3 rounded-xl">
+                                <p class="text-white">We are</p>
+                                <p class="text-white opacity-50 text-sm">in social networks</p>
+                                <div class="flex gap-4  py-3 px-5 justify-center items-center">
+                                    <div><img src="./assets/images/logos_facebook.png" alt=""></div>
+                                    <div><img src="./assets/images/logos_telegram.png" alt=""></div>
+                                    <div><img src="./assets/images/skill-icons_linkedin.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </Header>
+                </div>
+            </div>
+        </div>
+            <Header class="w-1/5 hidden lg:flex py-8 flex flex-col">
+                <nav class="px-5 flex">
+                    <ul class="w-full">
+                        <li class="pb-10"><a href=""><img class="mx-auto w-1/2" src="./assets/images/logo.png" alt="logo"></a>
+                        </li>
+                        <div class="bg-light-gray py-3 rounded-xl">
+                            <div class="flex py-3 px-5 justify-center items-center">
+                                <img class="mr-3" src="./assets/images/white-home.png" alt="home">
+                                <li class="text-white"><a href="./index.html">Home</a></li>
+                            </div>
+                            <div class="flex mt-4 relative bg-black py-3 px-5 justify-center items-center">
+                                <img class="mr-3" src="./assets/images/game-pink.png" alt="home">
+                                <div class="absolute left-0 top-[-5px]"><img src="./assets/images/active-pink.png"
+                                        alt=""></div>
+                                <li class="text-white"><a href="./seamlessGaming.html">Seamless Gaming</a></li>
+                            </div>
+                            <div class="flex mt-4 py-1 mx-10 border-b justify-center items-center">
+                                <div><img src="./assets/images/search-icon.png" alt=""></div>
+                                <input class="bg-transparent  text-xl outline-none w-full text-white ml-3" type="search"
+                                    placeholder="search" name="" id="">
+                            </div>
+                            <div class="flex  py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>Evolution</li>
+                            </div>
+                            <div class="flex py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>Progmatic</li>
+                            </div>
+                            <div class="flex py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>CQ9</li>
+                            </div>
+                            <div class="flex py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>Vota</li>
+                            </div>
+                            <div class="flex py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>Dowlnn</li>
+                            </div>
+                            <div class="flex py-2 px-5 items-center">
+                                <div><img class="w-10" src="./assets/images/arrow-right.png" alt="home"></div>
+                                <li class="text-white opacity-50"><a href=""></a>Vivo</li>
+                            </div>
+                            <div class="flex mt-2 py-2 px-5 justify-center items-center">
+                                <img class="mr-3" src="./assets/images/transfer.png" alt="home">
+                                <li class="text-white"><a href=""></a>Transfer Games</li>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="px-5 mt-32 flex text-center justify-center">
+                    <div class="bg-light-gray w-full py-3 rounded-xl">
+                        <p class="text-white">We are</p>
+                        <p class="text-white opacity-50 text-sm">in social networks</p>
+                        <div class="flex gap-4  py-3 px-5 justify-center items-center">
+                            <div><img src="./assets/images/logos_facebook.png" alt=""></div>
+                            <div><img src="./assets/images/logos_telegram.png" alt=""></div>
+                            <div><img src="./assets/images/skill-icons_linkedin.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </Header>
+
+            <div class="lg:w-4/5 bg-black px-4 mx-4 py-8 my-4 rounded-2xl">
+                <div class="flex hidden lg:flex  items-center justify-between">
+                    <h2 class="text-2xl font-bold text-white">Seamless Gaming</h2>
+                    <div class="flex gap-4">
+                        <div class="px-10 py-2 rounded-lg bg-gray-900 flex items-center">
+                            <div><img src="./assets/images/search-icon.png" alt=""></div>
+                            <input class="bg-transparent outline-none w-full text-white ml-3" type="search"
+                                placeholder="search" name="" id="">
+                        </div>
+                        <div>
+                            <button class="bg-blue-500 px-8 rounded-lg text-white py-2">Login</button>
+                        </div>
+                        <div>
+                            <button class="bg-gray-900 flex items-center px-8 text-white py-2">
+                                <img class="mr-3" src="./assets/images/australia.png" alt="">
+                                English</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== slots-section ================== -->
+                    <div>
+                        <div class="flex justify-between items-center pt-5">
+                            <h2 class="text-xl font-semibold text-white">Slots</h2>
+                            <div><img src="./assets/images/pragamtic-2.png" alt=""></div>
+                        </div>
+                        <div class="flex gap-10 justify-center flex-wrap">
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <img src="./assets/images/sevenseas.png" alt="">
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/goodes.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">NuWa Goodess</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/westgold.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Weild west gold</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/sugarrush.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Sugar Rush</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/bonnza.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Bonanza Gold</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/gates.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/gates-2.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/the-dog.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <img src="./assets/images/sevenseas.png" alt="">
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/goodes.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">NuWa Goodess</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/westgold.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Weild west gold</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/sugarrush.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Sugar Rush</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/bonnza.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Bonanza Gold</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/gates.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/gates-2.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray lg:w-1/5 w-2/5 rounded-2xl">
+                                <div class="w-full"><img class="w-full" src="./assets/images/the-dog.png" alt=""></div>
+                                <div class="px-2 py-2">
+                                    <h3 class="text-lg text-white">Seven Seas Pirates</h3>
+                                    <p class="text-white text-sm opacity-50">Every week different bonuses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+        <!-- ========================= logos-section ================================= -->
+
+        <div class="container mx-auto">
+            <div class="flex justify-center py-10">
+                <div><h2 class="text-4xl font-semibold text-white">Best Casino</h2></div>
+            </div>
+            <div class="flex justify-between px-4 py-5">
+                <div><img src="./assets/images/EVO.png" alt=""></div>
+                <div><img src="./assets/images/PP_Logo_On-Black.png" alt=""></div>
+                <div><img src="./assets/images/Asia-Gaming-Logo-Groot.png" alt=""></div>
+            </div>
+            <div class="flex justify-between py-5">
+                <div><img src="./assets/images/Vivo.png" alt=""></div>
+                <div><img src="./assets/images/GL9-pugA.png" alt=""></div>
+                <div><img src="./assets/images/TG.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- ==================== best-slot-machine ====================== -->
+
+        <div class="container mx-auto">
+            <div class="flex justify-center lg:py-10">
+                <div><h2 class="lg:text-4xl text-xl font-semibold text-white">Best Slot Machine</h2></div>
+            </div>
+            <div class="flex mx-2 justify-between gap-4 mt-4 lg:py-5">
+                <div><img src="./assets/images/the-dog.png" alt=""></div>
+                <div><img src="./assets/images/sweet.png" alt=""></div>
+                <div><img src="./assets/images/john-hunter.png" alt=""></div>
+                <div><img src="./assets/images/gates.png" alt=""></div>
+            </div>
+        </div>
+        
+        <!-- ====================== footer-section ============================= -->
+
+        <Footer class="py-10 mt-10 boxShadow">
+            <div class="container mx-auto">
+                <div class="flex justify-center py-10">
+                    <div><img class="w-2/4 mx-auto" src="./assets/images/logo.png" alt=""></div>
+                </div>
+                <div class="flex justify-center flex-wrap px-2 gap-10">
+                    <div class="bg-light-gray px-8 py-3 rounded-2xl text-center">
+                        <p class="text-white">Get In Touch</p>
+                    </div>
+                    <div class="bg-light-gray px-8 py-3 rounded-2xl text-center">
+                        <p class="text-white">Privacy Policy</p>
+                    </div>
+                    <div class="bg-light-gray px-8 py-3 rounded-2xl text-center">
+                        <p class="text-white">Cookie Policy</p>
+                    </div>
+                    <div class="bg-light-gray px-8 py-3 rounded-2xl text-center">
+                        <p class="text-white">Licence Info</p>
+                    </div>
+                </div>
+                <div class="flex justify-between flex-wrap px-3 items-center pt-20">
+                    <div class="px-3"><img src="./assets/images/EVO-2.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/netent.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/gaming.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/Ag.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/playtech.png" alt=""></div>
+                </div>
+                <div class="flex justify-between px-3 flex-wrap items-center pt-16">
+                    <div class="px-3"><img src="./assets/images/dowin.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/hab.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/vivogaming.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/pragamtic-2.png" alt=""></div>
+                    <div class="px-3"><img src="./assets/images/GL9-2.png" alt=""></div>
+                </div>
+            </div>
+        </Footer>
+    </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>

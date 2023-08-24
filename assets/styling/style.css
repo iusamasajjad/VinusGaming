@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: black;
+}
+
+/* ============= common-classes ======================== */
+
+.text-pink {
+    color: #FB59FB;
+}
+
+.bg-gray {
+    background: #121515;
+}
+
+.bg-light-gray {
+    background: #1A191E;
+}
+
+.boxShadow {
+    box-shadow: 0px -8px 24px 0px rgba(255, 255, 255, 0.10);
+}
+.overlay {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    z-index: 1;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.w-23{
+    width: 23%;
+}
+
+/* ================== background-img =========- */
+
+.login-bg{
+    background-image: url('../images/BgOverly.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ==================== slider ================= */
+
+.carousel-cell img {
+    width: 100%;
+}
+
+.carousel-cell {
+    width: 66%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+.flickity-page-dots .dot {
+    background: white !important;
+}
+
+.flickity-page-dots {
+    bottom: -5px !important;
+}
+
+.flickity-prev-next-button.previous {
+    display: none;
+}
+
+.flickity-prev-next-button.next {
+    display: none;
+}
